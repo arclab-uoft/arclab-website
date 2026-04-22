@@ -1,0 +1,14 @@
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap'); */
+
+/* ._mt-6 {
+    margin-top: 0.6em;
+} */
+
+/* .nextra-sidebar-container {
+  border-right: 1px solid grey;
+} */
+.awssld__content {
+  background-color: transparent !important;
+}
