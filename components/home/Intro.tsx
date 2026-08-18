@@ -1,29 +1,21 @@
-import React, { useEffect, useState } from "react"
-import Glide from "@glidejs/glide"
-import { getPagesUnderRoute } from "nextra/context";
-import MDXContent from "*.mdx";
-import { getStaticPaths } from "next/dist/build/templates/pages";
-import Logo from '../hive/Logo'
-import Hive from '../hive/Hive'
+import React from "react"
 
 export default function SliderControlsInside() {
     return (
-        <section className="py-14 bg-white">
-            <div className="max-w-screen-xl md:px-8">
-                <div className="items-center mx-auto sm:px-4 md:px-0 lg:flex">
-                    <div className="flex-1 sm:hidden lg:block">
-                        <center>
-                        <Logo className="w-64"/>
-                        </center>
+        <section className="py-16 bg-gray-100">
+            <div className="max-w-screen-2xl mx-auto px-6">
+                <div className="bg-white rounded-xl p-8 shadow-sm flex items-center justify-center gap-20">
+                    
+                    <div className="w-1/3 flex justify-center">
+                        <img src="/arc-icon.png" className="w-80" />
                     </div>
-                    <div className="max-w-xl sm:mx-auto px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
-                        <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                            <Hive className='w-96' />
-                        </p>
-                        <p className="mt-3 text-gray-600">
-                            The Health Informatics, Visualization, and Equity (HIVE) Lab, established in July 2022 at the Institute of Health Policy, Management and Evaluation, Dalla Lana School of Public Health at the University of Toronto, is a collective of data scientists, epidemiologists, and software engineers. This group operates at the intersection of Machine Learning, AI, Information Visualization, and Health Informatics. We are dedicated to integrating data from diverse sources and scales, developing innovative methods and open-source tools to enhance health at both individual and population levels. Our mission includes fostering national and international collaborations to propel the pursuit of health equity.
-                        </p>
 
+                    <div className="w-2/3 max-w-3xl space-y-3">
+                        <img src="/arc-text.png" className="w-96" />
+
+                        <p className="mt-3 text-gray-600">
+                            The AI for Responsible Care (ARC) Lab, established in July 2025 at the Institute of Health Policy, Management and Evaluation, Dalla Lana School of Public Health at the University of Toronto, uses, adapts, and develops AI and statistical methods to address problems in individual and population health. The lab brings together researchers from diverse backgrounds to study complex health challenges and design practical, equitable solutions for real-world settings. Our work spans unimodal and multimodal AI, causal inference, causal machine learning, and applied statistical approaches, with a focus on supporting better decisions and translating evidence into responsible action.
+                        </p>
                     </div>
                 </div>
             </div>

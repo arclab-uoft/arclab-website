@@ -3,12 +3,12 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
 import Member from "./components/team/Member";
-import Logo from "./components/hive/Logo";
-import Hive from "./components/hive/Hive";
+// import Logo from "./components/hive/Logo";
+// import Hive from "./components/hive/Hive";
 
-const AppLogo = () => (<div className="flex h-12">
-    <Logo className="mr-0" />
-    <Hive className="ml-2 h-8 self-center" />
+const AppLogo = () => (
+  <div className="flex items-center gap-2">
+    <img src="/arc-full.png" className="h-10 w-auto" />
   </div>
 );
 
@@ -39,7 +39,7 @@ const config: DocsThemeConfig = {
                 <ul className="mt-8 flex justify-start gap-6 sm:mt-0 sm:justify-end">
                   <li>
                     <a
-                      href="https://github.com/HIVE-UofT"
+                      href="https://github.com/arclab-uoft"
                       rel="noreferrer"
                       target="_blank"
                       className="text-gray-700 transition hover:opacity-75"
@@ -60,7 +60,7 @@ const config: DocsThemeConfig = {
               </div>
               <p className=" border-t border-gray-100 text-xs text-gray-500">
                 {" "}
-                Copyright © 2023 HIVE Lab @UofT. All rights reserved.
+                Copyright © 2025 ARC Lab @UofT. All rights reserved.
               </p>
             </div>
           </footer>

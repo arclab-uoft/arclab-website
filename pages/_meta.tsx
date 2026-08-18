@@ -1,5 +1,4 @@
 export default {
-  // default config for all pages
   "*": {
     type: "page",
     theme: {
@@ -8,46 +7,53 @@ export default {
       breadcrumb: false,
       timestamp: false,
       pagination: false,
-      layout: 'default'
+      layout: "default"
     }
   },
-  // pages config
-  "index": {
+
+  index: {
     title: "Home",
-    // type: "page"
-    // display: 'hidden',
+    type: "page",
     theme: {
-      layout: 'raw'
+      layout: "raw"
     }
   },
-  "team": {
+
+  team: {
     title: "Team",
     type: "page",
     theme: {
-      layout: 'default'
+      layout: "default"
     }
   },
-  "position": {
+
+  position: {
     title: "Open Positions",
-    // type: "page"
+    type: "page",
+    display: "hidden"
   },
-  "projects": {
+
+  projects: {
     title: "Projects",
     type: "page",
     theme: {
-      layout: 'default',
+      layout: "default"
     }
   },
-  "publication": {
+
+  publication: {
     title: "Publications",
-    // type: "page"
+    type: "page"
   },
-   "events": {
+
+  events: {
     title: "Events",
-    // type: "page"
+    type: "page",
+    display: "hidden"
   },
-  "contact": {
+
+  contact: {
     title: "Contact",
-    // type: "page"
-  },
+    type: "page"
+  }
 }
