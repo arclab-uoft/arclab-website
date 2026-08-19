@@ -3,8 +3,7 @@
   title = {Large language models lose diabetes stigma signals when patient culture shifts},
   journal = {Nature Communications},
   year = {2026},
-  note = {Accepted},
-  pdf = {/publications/2026_Large language models lose diabetes stigma signals when patient culture shifts.pdf}
+  note = {Accepted}
 }
 
 @article{shakeri2026opioid,
@@ -12,8 +11,7 @@
   title = {Detecting Misconception Surges in Opioid Policy: A Zero-Shot LLM Analysis of British Columbia's Decriminalization Pilot},
   journal = {BMC Public Health},
   year = {2026},
-  note = {Accepted},
-  pdf = {/publications/2026_Detecting misconception surges in opioid policy - a zero-shot LLM analysis of British Columbia's decriminalization pilot.pdf}
+  note = {Accepted}
 }
 
 @article{jafarinezhad2026federated,
@@ -24,8 +22,7 @@
   volume = {178},
   pages = {103422},
   doi = {10.1016/j.artmed.2026.103422},
-  url = {https://doi.org/10.1016/j.artmed.2026.103422},
-  pdf = {/publications/2026_Centralized pooling and federated learning for Canadian patient-level data sharing in multicenter medical AI - A scoping review.pdf}
+  url = {https://doi.org/10.1016/j.artmed.2026.103422}
 }
 
 @article{aveline2026antepartum,
@@ -37,8 +34,7 @@
   number = {2},
   pages = {e260102},
   doi = {10.1001/jamanetworkopen.2026.0102},
-  url = {https://doi.org/10.1001/jamanetworkopen.2026.0102},
-  pdf = {/publications/2026_Antepartum Exposure to Greenness, Air Pollution, and Temperature and Outcomes of Preterm Infants.pdf}
+  url = {https://doi.org/10.1001/jamanetworkopen.2026.0102}
 }
 
 @article{momtaz2026faircarenlp,
@@ -50,8 +46,7 @@
   number = {5},
   pages = {e0337676},
   doi = {10.1371/journal.pone.0337676},
-  url = {https://doi.org/10.1371/journal.pone.0337676},
-  pdf = {/publications/2026_FairCareNLP - An AI-driven patient review analyzer for healthcare.pdf}
+  url = {https://doi.org/10.1371/journal.pone.0337676}
 }
 
 @article{momtaz2026patientvoices,
@@ -63,8 +58,7 @@
   number = {2},
   pages = {e0000739},
   doi = {10.1371/journal.pdig.0000739},
-  url = {https://doi.org/10.1371/journal.pdig.0000739},
-  pdf = {/publications/2026_From patient voices to policy - Data analytics reveals patterns in Ontario’s hospital feedback.pdf}
+  url = {https://doi.org/10.1371/journal.pdig.0000739}
 }
 
 @article{noaeen2026neighbourhood,
@@ -75,8 +69,7 @@
   volume = {16},
   pages = {4137},
   doi = {10.1038/s41598-025-34287-7},
-  url = {https://doi.org/10.1038/s41598-025-34287-7},
-  pdf = {/publications/2026_Mapping neighbourhood-level drivers of type 2 diabetes for precision public health using predictive and causal machine learning.pdf}
+  url = {https://doi.org/10.1038/s41598-025-34287-7}
 }
 
 @inproceedings{mencialedo2026mortality,
@@ -84,8 +77,7 @@
   title = {Externally Validated Longitudinal GRU Model for Visit-Level 180-Day Mortality Risk in Metastatic Castration-Resistant Prostate Cancer},
   booktitle = {Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
   year = {2026},
-  note = {In Press},
-  pdf = {/publications/2026_Externally Validated Longitudinal GRU Model for Visit-Level 180-Day Mortality Risk in Metastatic Castration-Resistant Prostate Cancer.pdf}
+  note = {In Press}
 }
 
 @inproceedings{sheng2026prodcar,
@@ -93,8 +85,7 @@
   title = {ProDCARL: Reinforcement Learning-Aligned Diffusion Models for De Novo Antimicrobial Peptide Design},
   booktitle = {Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
   year = {2026},
-  note = {In Press},
-  pdf = {/publications/2026_ProDCARL- Reinforcement Learning-Aligned Diffusion Models for De Novo Antimicrobial Peptide Design.pdf}
+  note = {In Press}
 }
 
 @inproceedings{khdr2026medgate,
@@ -110,8 +101,7 @@
   title = {Multimodal Contrastive Alignment of Histopathology and Bulk Transcriptomics in Breast Cancer},
   booktitle = {Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
   year = {2026},
-  note = {In Press},
-  pdf = {/publications/2026_Multimodal Contrastive Alignment of Histopathology and Bulk Transcriptomics in Breast Cancer.pdf}
+  note = {In Press}
 }
 
 @incollection{noaeen2024environmentaldata,
@@ -120,8 +110,7 @@
   booktitle = {Principles and Advances in Population Neuroscience},
   publisher = {Springer},
   year = {2024},
-  pages = {297--323},
-  pdf = {/publications/2024_Advancing Population Health Through Open Environmental Data Platforms.pdf}
+  pages = {297--323}
 }
 
 @inproceedings{lu2024prediabetes,
@@ -129,8 +118,7 @@
   title = {Identifying Prediabetes in Canadian Populations Using Machine Learning},
   booktitle = {46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
   year = {2024},
-  organization = {IEEE},
-  pdf = {/publications/2024_Identifying Prediabetes in Canadian Populations Using Machine Learning.pdf}
+  organization = {IEEE}
 }
 
 @inproceedings{tanchip2024donor,
@@ -138,8 +126,7 @@
   title = {Predicting Donor Selection and Multi-Organ Transplantation within Organ Procurement Organizations Using Machine Learning},
   booktitle = {46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
   year = {2024},
-  organization = {IEEE},
-  pdf = {/publications/2024_Predicting Donor Selection and Multi-Organ Transplantation within Organ Procurement Organizations Using Machine Learning.pdf}
+  organization = {IEEE}
 }
 
 @inproceedings{esser2024diabetes,
@@ -147,8 +134,7 @@
   title = {Predicting Diabetes in Canadian Adults Using Machine Learning},
   booktitle = {46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
   year = {2024},
-  organization = {IEEE},
-  pdf = {/publications/2024_Predicting Diabetes in Canadian Adults Using Machine Learning.pdf}
+  organization = {IEEE}
 }
 
 @inproceedings{saha2024diabetes,
@@ -156,17 +142,15 @@
   title = {Predicting Time to Diabetes Diagnosis Using Random Survival Forests},
   booktitle = {46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
   year = {2024},
-  organization = {IEEE},
-  pdf = {/publications/2024_Predicting Time to Diabetes Diagnosis Using Random Survival Forests.pdf}
+  organization = {IEEE}
 }
 
 @inproceedings{samsel2024depression,
   author = {Samsel, Konrad and Tiwana, Amrit and Ali, Sarra and Guergachi, Aziz and Keshavjee, Karim and Noaeen, Mohammad and Shakeri, Zahra},
-  title = {Predicting depression among canadians at-risk or living with diabetes using machine learning},
+  title = {Predicting Depression Among Canadians At-Risk or Living with Diabetes Using Machine Learning},
   booktitle = {46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
   year = {2024},
-  organization = {IEEE},
-  pdf = {/publications/2024_Predicting Depression in Canadians with or at Risk of Diabetes - A Cross-Sectional Machine Learning Analysis.pdf}
+  organization = {IEEE}
 }
 
 @article{doiron2024healthyplan,
@@ -176,8 +160,7 @@
   year = {2024},
   volume = {101},
   number = {3},
-  pages = {497--507},
-  pdf = {/publications/2024_HealthyPlan.City - A Web Tool to Support Urban Environmental Equity and Public Health in Canadian Communities.pdf}
+  pages = {497--507}
 }
 
 @inproceedings{noaeen2023ehr,
@@ -185,8 +168,7 @@
   title = {Unlocking the Power of EHRs: Harnessing Unstructured Data for Machine Learning-Based Outcome Predictions},
   booktitle = {45th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
   year = {2023},
-  organization = {IEEE},
-  pdf = {/publications/2023_Unlocking the Power of EHRs - Harnessing Unstructured Data for Machine Learning-based Outcome Predictions.pdf}
+  organization = {IEEE}
 }
 
 @inproceedings{li2023perimeter,
@@ -194,8 +176,7 @@
   title = {Perimeter Control Using Deep Reinforcement Learning: A Model-Free Approach Towards Homogeneous Flow Rate Optimization},
   booktitle = {IEEE 26th International Conference on Intelligent Transportation Systems (ITSC)},
   year = {2023},
-  organization = {IEEE},
-  pdf = {/publications/2023_Perimeter Control Using Deep Reinforcement Learning - A Model-free Approach towards Homogeneous Flow Rate Optimization.pdf}
+  organization = {IEEE}
 }
 
 @article{noaeen2022reinforcement,
@@ -206,8 +187,7 @@
   volume = {199},
   pages = {116830},
   doi = {10.1016/j.eswa.2022.116830},
-  url = {https://doi.org/10.1016/j.eswa.2022.116830},
-  pdf = {/publications/2022_Reinforcement learning in urban network traffic signal control - A systematic literature review.pdf}
+  url = {https://doi.org/10.1016/j.eswa.2022.116830}
 }
 
 @article{noaeen2021realtime,
@@ -218,8 +198,7 @@
   volume = {133},
   pages = {103407},
   doi = {10.1016/j.trc.2021.103407},
-  url = {https://doi.org/10.1016/j.trc.2021.103407},
-  pdf = {/publications/2021_Real-time decentralized traffic signal control for congested urban networks considering queue spillbacks.pdf}
+  url = {https://doi.org/10.1016/j.trc.2021.103407}
 }
 
 @article{shakeri2021surveillance,
@@ -229,8 +208,7 @@
   year = {2021},
   volume = {4},
   number = {1},
-  pages = {41},
-  pdf = {/publications/2021_Digital public health surveillance - a systematic scoping review.pdf}
+  pages = {41}
 }
 
 @inproceedings{noaeen2020socialmedia,
