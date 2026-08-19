@@ -34,7 +34,7 @@ export default {
   },
 
   projects: {
-    title: "Projects",
+    title: "Research",
     type: "page",
     theme: {
       layout: "default"

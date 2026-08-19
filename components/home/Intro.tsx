@@ -14,8 +14,14 @@ export default function SliderControlsInside() {
                         <img src="/arc-text.png" className="w-96" />
 
                         <p className="mt-3 text-gray-600">
-                            The AI for Responsible Care (ARC) Lab, established in July 2025 at the Institute of Health Policy, Management and Evaluation, Dalla Lana School of Public Health at the University of Toronto, uses, adapts, and develops AI and statistical methods to address problems in individual and population health. The lab brings together researchers from diverse backgrounds to study complex health challenges and design practical, equitable solutions for real-world settings. Our work spans unimodal and multimodal AI, causal inference, causal machine learning, and applied statistical approaches, with a focus on supporting better decisions and translating evidence into responsible action.
+                            Established in July 2025, ARC Lab develops AI for complex problems across health and public systems, from individual patient care to population, environmental, and urban health. Our research combines multimodal data, domain knowledge, and computational models to support prediction, personalization, scientific discovery, and real-world decision making. We focus on AI that is reliable, responsible, and useful as data, evidence, and real-world settings evolve.
                         </p>
+
+                        <p className="mt-4 text-sm text-gray-500">
+                        Institute of Health Policy, Management and Evaluation · Dalla Lana School
+                        of Public Health · University of Toronto
+                        </p>
+
                     </div>
                 </div>
             </div>
