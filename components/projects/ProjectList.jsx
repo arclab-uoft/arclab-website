@@ -5,36 +5,37 @@ const researchAreas = [
     number: "01",
     title: "Multimodal & Personalized Health",
     description:
-      "Multimodal AI combining clinical records, imaging, text, audio, physiological signals, and other data for prediction, triage, personalization, and care delivery.",  },
+      "AI approaches that bring together multiple sources of health data to support more personalized understanding, prediction, and care.",
+  },
   {
     number: "02",
-    title: "Cancer & Computational Biomedicine",
+    title: "Responsible AI & Complex Systems",
     description:
-      "Computational and multimodal approaches for cancer diagnosis, prognosis, treatment response, biological discovery, and precision oncology.",
+      "AI methods designed for complex, changing, and high-stakes settings, with an emphasis on reliability, responsibility, and adaptability.",
   },
   {
     number: "03",
-    title: "Mental, Cognitive & Neurodevelopmental Health",
+    title: "Cancer & Computational Biomedicine",
     description:
-      "AI for mental health, cognition, dementia, neurodevelopment, behavioural health, and changes across the life course.",
+      "Computational approaches to better understand cancer, support clinical research, and study complex biological and biomedical data.",
   },
   {
     number: "04",
-    title: "Child, Neonatal & Family Health",
+    title: "Mental, Cognitive & Neurodevelopmental Health",
     description:
-      "Personalized and multimodal approaches for newborns, preterm infants, children with medical complexity, pain, acute deterioration, and developmental outcomes.",
+      "AI and data-driven research focused on mental health, cognition, neurodevelopment, and related changes across the life course.",
   },
   {
     number: "05",
-    title: "Population, Environmental & Urban Health",
+    title: "Child, Neonatal & Family Health",
     description:
-      "AI for air pollution, climate and environmental exposures, neighbourhoods, transportation, health equity, and population health.",
+      "Data-driven and personalized approaches to support research in neonatal, pediatric, and family health.",
   },
   {
     number: "06",
-    title: "Reliable AI & Complex Systems",
+    title: "Population, Environmental & Mobility Health",
     description:
-      "Reliable, responsible, and revisable AI for changing evidence and complex systems, including physics informed learning, neural operators, simulation, digital twins, reinforcement learning, and quantum AI.",
+      "AI and data-driven research on environmental exposures, urban systems, transportation, traffic, mobility, population health, and their connections to health and well-being.",
   },
 ];
 
