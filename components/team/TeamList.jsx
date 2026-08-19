@@ -104,7 +104,7 @@ export default memo(() => {
                 <div className="mt-8">
                     {Object.keys(teams)
                         .sort()
-			.filter((category, index) => index < 2)
+			.filter((category, index) => index < 3)
                         .map((category, index) => (
                             <div key={category}>
                                 {index > 0 && (
