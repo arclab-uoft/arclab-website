@@ -83,9 +83,7 @@ const BibTeX: React.FC<CitationStyle> = ({ citationStyle }) => {
         </h1>
 
         <p className="_mt-3 _max-w-3xl _text-gray-600 dark:_text-gray-300">
-          Peer-reviewed publications across
-          AI, health, environmental and population research, and
-          transportation.
+          Peer-reviewed publications across artificial intelligence, health, environmental and population research, transportation, and complex systems.
         </p>
 
         <a
