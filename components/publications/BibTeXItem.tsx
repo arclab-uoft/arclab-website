@@ -176,7 +176,7 @@ const BibTeXItem: React.FC<BibTeXItemProps> = ({ entry }) => {
               <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5" />
             </svg>
 
-            Publisher
+            Publication page
           </a>
         )}
 
