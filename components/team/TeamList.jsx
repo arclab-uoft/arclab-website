@@ -109,7 +109,7 @@ export default memo(() => {
                             <div key={category}>
                                 {index > 0 && (
                                     <>
-                                        <h3 className="text-2xl mt-4 font-semibold">
+                                        <h3 className="text-2xl mt-10 font-semibold">
                                             {index === 1 ? "Research Team" : "Alumni"}
                                         </h3>
                                         <hr />
