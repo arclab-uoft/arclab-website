@@ -1,56 +1,85 @@
-import React, { useState, useEffect, useRef } from "react";
-import { getPagesUnderRoute } from "nextra/context";
+import React, { useEffect, useRef } from "react";
+
+const researchAreas = [
+  {
+    number: "01",
+    title: "Multimodal & Personalized Health",
+    description:
+      "Multimodal AI combining clinical records, imaging, text, audio, physiological signals, and other data for prediction, triage, personalization, and care delivery.",  },
+  {
+    number: "02",
+    title: "Cancer & Computational Biomedicine",
+    description:
+      "Computational and multimodal approaches for cancer diagnosis, prognosis, treatment response, biological discovery, and precision oncology.",
+  },
+  {
+    number: "03",
+    title: "Mental, Cognitive & Neurodevelopmental Health",
+    description:
+      "AI for mental health, cognition, dementia, neurodevelopment, behavioural health, and changes across the life course.",
+  },
+  {
+    number: "04",
+    title: "Child, Neonatal & Family Health",
+    description:
+      "Personalized and multimodal approaches for newborns, preterm infants, children with medical complexity, pain, acute deterioration, and developmental outcomes.",
+  },
+  {
+    number: "05",
+    title: "Population, Environmental & Urban Health",
+    description:
+      "AI for air pollution, climate and environmental exposures, neighbourhoods, transportation, health equity, and population health.",
+  },
+  {
+    number: "06",
+    title: "Reliable AI & Complex Systems",
+    description:
+      "Reliable, responsible, and revisable AI for changing evidence and complex systems, including physics informed learning, neural operators, simulation, digital twins, reinforcement learning, and quantum AI.",
+  },
+];
 
 export default function ProjectList() {
-  const [researchAreas, setResearchAreas] = useState([]);
   const elmRef = useRef(null);
 
   useEffect(() => {
-    const pages = getPagesUnderRoute("/projects");
-
-    const areas = pages
-      .filter((page) => page.frontMatter?.type === "research-area")
-      .sort(
-        (a, b) =>
-          (a.frontMatter?.order ?? 999) -
-          (b.frontMatter?.order ?? 999)
-      );
-
-    setResearchAreas(areas);
-
-    // Preserve the existing Nextra layout adjustment
     const parent =
       elmRef.current?.parentElement?.parentElement?.parentElement;
 
-    const divCfgMargin = parent?.children[0];
+    const divCfgMargin = parent?.children?.[0];
     const firstNav = parent?.querySelector("nav");
+
+    const divHadWidth = divCfgMargin?.classList.contains("_w-64");
+    const navHadWidth = firstNav?.classList.contains("_w-64");
 
     divCfgMargin?.classList.remove("_w-64");
     firstNav?.classList.remove("_w-64");
 
     return () => {
-      divCfgMargin?.classList.add("_w-64");
-      firstNav?.classList.add("_w-64");
+      if (divHadWidth) {
+        divCfgMargin?.classList.add("_w-64");
+      }
+
+      if (navHadWidth) {
+        firstNav?.classList.add("_w-64");
+      }
     };
   }, []);
 
   return (
     <section className="py-8" ref={elmRef}>
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-
-        <div className="max-w-4xl mx-auto sm:text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
             ARC Lab Research
           </h1>
 
           <p className="text-gray-600 mt-4 leading-7">
-            ARC Lab projects investigate how AI can be used to answer difficult
-            questions in health and public systems. Our work spans clinical
-            care, cancer, mental and cognitive health, child and neonatal
-            health, environmental and urban health, and complex biomedical
-            systems. Each project starts from a specific problem and brings
-            together the data, domain knowledge, and computational methods
-            needed to study it.
+            ARC Lab research addresses complex questions across health and public
+            systems. Our work spans clinical care, cancer, mental and cognitive
+            health, child and neonatal health, environmental and urban health, and
+            complex biomedical systems. Each project begins with a specific research
+            question and brings together the data, domain knowledge, and computational
+            methods needed to study it.
           </p>
         </div>
 
@@ -60,26 +89,25 @@ export default function ProjectList() {
           </h2>
 
           <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {researchAreas.map((page, idx) => (
-              <li key={page.route || idx} className="h-full">
-                <article className="h-full rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            {researchAreas.map((area) => (
+              <li key={area.number} className="h-full">
+                <article className="h-full rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
                   <div className="text-sm font-medium text-slate-400">
-                    {String(idx + 1).padStart(2, "0")}
+                    {area.number}
                   </div>
 
                   <h3 className="mt-4 text-xl font-semibold text-gray-800">
-                    {page.frontMatter?.title}
+                    {area.title}
                   </h3>
 
                   <p className="mt-3 text-gray-600 leading-6">
-                    {page.frontMatter?.story}
+                    {area.description}
                   </p>
                 </article>
               </li>
             ))}
           </ul>
         </div>
-
       </div>
     </section>
   );
