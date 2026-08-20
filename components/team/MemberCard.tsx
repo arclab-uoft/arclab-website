@@ -117,7 +117,12 @@ const MemberCard = memo(
                             <img
                                 src={frontMatter.image}
                                 alt={frontMatter.title || ""}
-                                className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.035]"
+                                style={{
+                                    objectPosition:
+                                    (frontMatter as FrontMatter & { image_position?: string }).image_position ||
+                                    "center center",
+                                }}
+                                className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.035]"
                             />
                         </WrapLink>
 
