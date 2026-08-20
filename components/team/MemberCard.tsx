@@ -19,6 +19,12 @@ const WrapLink = ({
     return <>{children}</>;
 };
 
+type ExtendedFrontMatter = FrontMatter & {
+    keywords?: string;
+    thumbnail?: string;
+    image_position?: string;
+};
+
 const MemberCard = memo(
     ({
         frontMatter,
@@ -35,30 +41,35 @@ const MemberCard = memo(
             return null;
         }
 
+        const extendedFrontMatter = frontMatter as ExtendedFrontMatter;
+
         const { range, current_position } = frontMatter;
 
-        // Allows keywords even if the current FrontMatter type
-        // does not explicitly define the field yet.
-        const keywords = (
-            frontMatter as FrontMatter & {
-                keywords?: string;
-            }
-        ).keywords;
+        const keywords = extendedFrontMatter.keywords;
+
+        const thumbnail =
+            extendedFrontMatter.thumbnail || frontMatter.image;
+
+        const imagePosition =
+            extendedFrontMatter.image_position || "center center";
 
         /*
-         * Individual member page
-         * Keep the existing larger profile presentation.
+         * Individual profile page
+         * Uses the original image.
          */
         if (idx < 1) {
             return (
                 <div className="w-full text-center">
                     {showImage && frontMatter.image && (
-                        <div className="mx-auto mb-4 h-48 w-48">
+                        <div className="mx-auto mb-6 w-64 overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 shadow-sm">
                             <WrapLink href={route}>
                                 <img
                                     src={frontMatter.image}
                                     alt={frontMatter.title || ""}
-                                    className="h-full w-full rounded-full object-cover object-center"
+                                    style={{
+                                        objectPosition: imagePosition,
+                                    }}
+                                    className="aspect-[4/5] w-full object-cover"
                                 />
                             </WrapLink>
                         </div>
@@ -107,32 +118,40 @@ const MemberCard = memo(
         }
 
         /*
-         * Team listing card
+         * Main Team page
+         * Uses the manually prepared 4:3 thumbnail.
          */
         return (
             <li className="group mt-8">
-                {showImage && frontMatter.image && (
+                {showImage && thumbnail && (
                     <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 shadow-sm">
                         <WrapLink href={route}>
                             <img
-                                src={frontMatter.image}
+                                src={thumbnail}
                                 alt={frontMatter.title || ""}
-                                style={{
-                                    objectPosition:
-                                    (frontMatter as FrontMatter & { image_position?: string }).image_position ||
-                                    "center center",
-                                }}
-                                className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.035]"
+                                className="
+                                    h-full
+                                    w-full
+                                    object-cover
+                                    object-center
+                                    transition-transform
+                                    duration-500
+                                    ease-out
+                                    group-hover:scale-[1.02]
+                                "
                             />
                         </WrapLink>
 
                         {(frontMatter.role || keywords) && (
                             <div
                                 className="
-                                    absolute inset-x-0 bottom-0
+                                    absolute
+                                    inset-x-0
+                                    bottom-0
                                     translate-y-full
                                     bg-slate-900/85
-                                    px-5 py-4
+                                    px-5
+                                    py-4
                                     text-white
                                     backdrop-blur-sm
                                     transition-transform
