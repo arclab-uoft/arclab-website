@@ -123,7 +123,7 @@ const config: DocsThemeConfig = {
     const url =
       domain + (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
 
-    const app_title = frontMatter.title || title || "HIVE lab @UofT";
+    const app_title = frontMatter.title || title || "ARC Lab @UofT";
 
     let keywords = [];
     
@@ -140,12 +140,12 @@ const config: DocsThemeConfig = {
     const app_keywords = keywords.join(", ");
 
     const GA_TRACKING_ID = "G-CH35R4ZQXL";
-    const description = frontMatter.description || "HIVE lab @UofT";
+    const description = frontMatter.description || "ARC Lab @UofT";
     return (
       <>
         <title>{app_title}</title>
         <meta name="apple-mobile-web-app-title" content={app_title} />
-        <meta name="author" content={frontMatter.author || "HIVE lab @UofT"} />
+        <meta name="author" content={frontMatter.author || "ARC Lab @UofT"} />
         <meta property="keywords" content={app_keywords} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={url} />
