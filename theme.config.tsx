@@ -8,7 +8,7 @@ import Member from "./components/team/Member";
 
 const AppLogo = () => (
   <div className="flex items-center gap-2">
-    <img src="/arc-full.png" className="h-10 w-auto" />
+    <img src="/arc-full.png" className="h-16 w-auto" />
   </div>
 );
 

@@ -116,7 +116,7 @@ export default memo(() => {
                                     </>
                                 )}
 
-                                <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-start">
+                                <ul className="grid gap-x-7 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 items-start">
                                     {teams[category].map((page, idx) => (
                                         <MemberCard
                                             key={idx}

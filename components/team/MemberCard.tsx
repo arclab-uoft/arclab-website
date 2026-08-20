@@ -1,85 +1,203 @@
-import { getPagesUnderRoute } from "nextra/context";
 import Link from "next/link";
-import { memo } from "react";
-import IconBar from './IconBar';
-import { FrontMatter } from './type';
-import { ReactNode } from 'react';
-import ReactMarkdown from 'react-markdown'; // Import ReactMarkdown
+import { memo, ReactNode } from "react";
+import ReactMarkdown from "react-markdown";
 
-const WrapLink = ({ href, children }: { href?: string, children: ReactNode }) => {
+import IconBar from "./IconBar";
+import { FrontMatter } from "./type";
+
+const WrapLink = ({
+    href,
+    children,
+}: {
+    href?: string;
+    children: ReactNode;
+}) => {
     if (href) {
-        return (<Link href={href}>
-            {children}
-        </Link>);
+        return <Link href={href}>{children}</Link>;
     }
-    return children;
-}
 
-const MemberCard = memo(({ frontMatter, route, idx = 0, showImage = true }: { route?: string, frontMatter?: FrontMatter, idx?: number, showImage?: boolean }) => {
+    return <>{children}</>;
+};
 
-    const { range, current_position } = frontMatter;
-    const imageSize = idx == 0 ? "w-48 h-48 mb-4" : "w-24 h-24";
+const MemberCard = memo(
+    ({
+        frontMatter,
+        route,
+        idx = 0,
+        showImage = true,
+    }: {
+        route?: string;
+        frontMatter?: FrontMatter;
+        idx?: number;
+        showImage?: boolean;
+    }) => {
+        if (!frontMatter) {
+            return null;
+        }
 
-    const View = (
-        <>
-            {(showImage) && (
-                <div className={`flex-none ${imageSize} `}>
+        const { range, current_position } = frontMatter;
+
+        // Allows keywords even if the current FrontMatter type
+        // does not explicitly define the field yet.
+        const keywords = (
+            frontMatter as FrontMatter & {
+                keywords?: string;
+            }
+        ).keywords;
+
+        /*
+         * Individual member page
+         * Keep the existing larger profile presentation.
+         */
+        if (idx < 1) {
+            return (
+                <div className="w-full text-center">
+                    {showImage && frontMatter.image && (
+                        <div className="mx-auto mb-4 h-48 w-48">
+                            <WrapLink href={route}>
+                                <img
+                                    src={frontMatter.image}
+                                    alt={frontMatter.title || ""}
+                                    className="h-full w-full rounded-full object-cover object-center"
+                                />
+                            </WrapLink>
+                        </div>
+                    )}
+
                     <WrapLink href={route}>
-                        <img
-                            src={frontMatter?.image}
-                            className="w-full h-full rounded-full"
-                            alt=""
-                        />
+                        <h2 className="text-xl font-semibold text-gray-800">
+                            {frontMatter.title}
+                        </h2>
                     </WrapLink>
-                </div>
-            )}
 
-            <div >
-                <WrapLink href={route}>
-                    <h2 className="text-xl hover:text-2xl font-semibold">{frontMatter.title}</h2>
-                </WrapLink>
-                <WrapLink href={route}>
-                    <p>{frontMatter.role}</p>
-                </WrapLink>
-                {range && (
-                    <ReactMarkdown>{`${range} ${current_position}`}</ReactMarkdown>
+                    <p className="mt-1 text-gray-600">
+                        {frontMatter.role}
+                    </p>
+
+                    {range && (
+                        <div className="mt-1 text-gray-600">
+                            <ReactMarkdown>
+                                {`${range} ${current_position || ""}`}
+                            </ReactMarkdown>
+                        </div>
+                    )}
+
+                    <div className="mt-3 flex justify-center gap-3">
+                        {IconBar.map((item) => {
+                            const value = frontMatter[item.field];
+
+                            if (!value) {
+                                return null;
+                            }
+
+                            return (
+                                <Link
+                                    key={item.field}
+                                    href={value}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {item.icon}
+                                </Link>
+                            );
+                        })}
+                    </div>
+                </div>
+            );
+        }
+
+        /*
+         * Team listing card
+         */
+        return (
+            <li className="group mt-8">
+                {showImage && frontMatter.image && (
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 shadow-sm">
+                        <WrapLink href={route}>
+                            <img
+                                src={frontMatter.image}
+                                alt={frontMatter.title || ""}
+                                className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.035]"
+                            />
+                        </WrapLink>
+
+                        {(frontMatter.role || keywords) && (
+                            <div
+                                className="
+                                    absolute inset-x-0 bottom-0
+                                    translate-y-full
+                                    bg-slate-900/85
+                                    px-5 py-4
+                                    text-white
+                                    backdrop-blur-sm
+                                    transition-transform
+                                    duration-300
+                                    ease-out
+                                    group-hover:translate-y-0
+                                    group-focus-within:translate-y-0
+                                "
+                            >
+                                {frontMatter.role && (
+                                    <p className="text-sm font-semibold">
+                                        {frontMatter.role}
+                                    </p>
+                                )}
+
+                                {keywords && (
+                                    <p className="mt-1.5 text-xs leading-5 text-slate-200">
+                                        {keywords}
+                                    </p>
+                                )}
+                            </div>
+                        )}
+                    </div>
                 )}
 
+                <div className="mt-4">
+                    <WrapLink href={route}>
+                        <h2 className="text-lg font-semibold leading-6 text-gray-800 transition-colors hover:text-slate-600">
+                            {frontMatter.title}
+                        </h2>
+                    </WrapLink>
 
-                <div className={`mt-3 flex gap-3 ${(idx < 1) ? 'justify-center' : ''}`}>
-                    {
-                        IconBar.map(item => {
-                            const value = frontMatter[item.field]
-                            if (value) {
-                                return (
-                                    <Link href={value} target="_blank">
-                                        {item.icon}
-                                    </Link>
-                                );
+                    <p className="mt-1 text-sm text-gray-500">
+                        {frontMatter.role}
+                    </p>
+
+                    {range && (
+                        <div className="mt-1 text-sm text-gray-500">
+                            <ReactMarkdown>
+                                {`${range} ${current_position || ""}`}
+                            </ReactMarkdown>
+                        </div>
+                    )}
+
+                    <div className="mt-3 flex gap-3">
+                        {IconBar.map((item) => {
+                            const value = frontMatter[item.field];
+
+                            if (!value) {
+                                return null;
                             }
-                            return null;
-                        })
-                    }
-                </div>
-            </div>
-        </>
-    );
 
-    if (idx < 1) {
-        // in team member page 
-        return (
-            <center>
-                <div className="w-full">
-                    {View}
+                            return (
+                                <Link
+                                    key={item.field}
+                                    href={value}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {item.icon}
+                                </Link>
+                            );
+                        })}
+                    </div>
                 </div>
-            </center>
+            </li>
         );
     }
-    return (
-        <li key={idx} className="flex gap-4 items-center mt-8">
-            {View}
-        </li>
-    );
-});
+);
+
+MemberCard.displayName = "MemberCard";
 
 export default MemberCard;
