@@ -52,13 +52,13 @@ const MemberCard = memo(
 
         const imagePosition =
             extendedFrontMatter.image_position || "center center";
-        
+
         const isAlumni =
             frontMatter.category?.startsWith("C3_");
 
         /*
          * Individual profile page
-         * Uses the original image.
+         * Uses original profile image.
          */
         if (idx < 1) {
             return (
@@ -121,29 +121,81 @@ const MemberCard = memo(
         }
 
         /*
-         * Main Team page
-         * Uses the manually prepared 4:3 thumbnail.
+         * Alumni
+         * Small circular image, no card and no hover overlay.
+         */
+        if (isAlumni) {
+            return (
+                <li className="mt-7 flex items-center gap-4">
+                    {showImage && frontMatter.image && (
+                        <div className="h-[72px] w-[72px] flex-none overflow-hidden rounded-full border border-gray-200 bg-gray-100">
+                            <WrapLink href={route}>
+                                <img
+                                    src={frontMatter.image}
+                                    alt={frontMatter.title || ""}
+                                    style={{
+                                        objectPosition: imagePosition,
+                                    }}
+                                    className="h-full w-full object-cover"
+                                />
+                            </WrapLink>
+                        </div>
+                    )}
+
+                    <div>
+                        <WrapLink href={route}>
+                            <h2 className="text-lg font-semibold leading-6 text-gray-800 hover:text-slate-600">
+                                {frontMatter.title}
+                            </h2>
+                        </WrapLink>
+
+                        {frontMatter.role && (
+                            <p className="mt-0.5 text-sm text-gray-500">
+                                {frontMatter.role}
+                            </p>
+                        )}
+
+                        {range && (
+                            <div className="mt-0.5 text-sm text-gray-500">
+                                <ReactMarkdown>
+                                    {`${range} ${current_position || ""}`}
+                                </ReactMarkdown>
+                            </div>
+                        )}
+
+                        <div className="mt-2 flex gap-3">
+                            {IconBar.map((item) => {
+                                const value = frontMatter[item.field];
+
+                                if (!value) {
+                                    return null;
+                                }
+
+                                return (
+                                    <Link
+                                        key={item.field}
+                                        href={value}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {item.icon}
+                                    </Link>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </li>
+            );
+        }
+
+        /*
+         * Active Research Team
+         * Uses prepared 4:3 thumbnail and hover research information.
          */
         return (
-            <li
-                className={`group mt-8 ${
-                    isAlumni ? "max-w-[250px]" : ""
-                }`}
-            >
+            <li className="group mt-8">
                 {showImage && thumbnail && (
-                    <div
-                        className={`
-                            relative
-                            aspect-[4/3]
-                            overflow-hidden
-                            rounded-2xl
-                            border
-                            border-gray-200
-                            bg-gray-100
-                            shadow-sm
-                            ${isAlumni ? "w-[220px]" : "w-full"}
-                        `}
-                    >
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 shadow-sm">
                         <WrapLink href={route}>
                             <img
                                 src={thumbnail}
@@ -206,14 +258,6 @@ const MemberCard = memo(
                     <p className="mt-1 text-sm text-gray-500">
                         {frontMatter.role}
                     </p>
-
-                    {range && (
-                        <div className="mt-1 text-sm text-gray-500">
-                            <ReactMarkdown>
-                                {`${range} ${current_position || ""}`}
-                            </ReactMarkdown>
-                        </div>
-                    )}
 
                     <div className="mt-3 flex gap-3">
                         {IconBar.map((item) => {
