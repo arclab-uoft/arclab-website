@@ -52,6 +52,9 @@ const MemberCard = memo(
 
         const imagePosition =
             extendedFrontMatter.image_position || "center center";
+        
+        const isAlumni =
+            frontMatter.category?.startsWith("C3_");
 
         /*
          * Individual profile page
@@ -122,9 +125,25 @@ const MemberCard = memo(
          * Uses the manually prepared 4:3 thumbnail.
          */
         return (
-            <li className="group mt-8">
+            <li
+                className={`group mt-8 ${
+                    isAlumni ? "max-w-[250px]" : ""
+                }`}
+            >
                 {showImage && thumbnail && (
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 shadow-sm">
+                    <div
+                        className={`
+                            relative
+                            aspect-[4/3]
+                            overflow-hidden
+                            rounded-2xl
+                            border
+                            border-gray-200
+                            bg-gray-100
+                            shadow-sm
+                            ${isAlumni ? "w-[220px]" : "w-full"}
+                        `}
+                    >
                         <WrapLink href={route}>
                             <img
                                 src={thumbnail}
