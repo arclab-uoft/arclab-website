@@ -11,11 +11,10 @@ export default {
   ...withNextra({ reactStrictMode: true }),
   // distDir: 'out',
   output: 'export',
-  basePath: isGithubPages ? "/arclab-website" : "",
-  assetPrefix: isGithubPages ? "/arclab-website/" : "",
+  
   images: {
     loader: "akamai",
     path: "",
   },
-  //assetPrefix: "",
+  assetPrefix: "",
 };
