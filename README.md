@@ -1,6 +1,6 @@
-# Hive Lab @UofT Web Site
+# ARC Lab @UofT Web Site
 
-The Health Informatics, Visualization, and Equity (HIVE) Lab in the Institute of Health Policy, Management and Evaluation, Dalla Lana School of Public Health at the University of Toronto.
+The AI for Responsible Care (ARC) Lab in the Institute of Health Policy, Management and Evaluation, Dalla Lana School of Public Health at the University of Toronto.
 
 ## Local Development
 
