@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
-  <title id="title">ARC Lab, compact symbol on navy square</title>
-  <desc id="description">ARC Lab compact symbol. Original white A-shaped arc surrounding a light blue person on a navy square.</desc>
-  <metadata>ARC Lab — AI for Responsible Care. Main lettering is Allerta Stencil Regular, matching the provided HIVE Lab reference, converted to vector outlines. Descriptor is Nimbus Sans Regular, converted to vector outlines. University of Toronto palette: navy #1E3765, teal #007FA3, light blue #6FC7EA; white #FFFFFF. SVG uses sRGB. Original A and person path geometry is preserved. Palette source: https://www.utm.utoronto.ca/communications/media/327/download?inline=.</metadata>
-  <path id="background" fill="#1E3765" d="M0 0H512V512H0Z" />
-  <g id="symbol" transform="translate(128.57576 111) scale(2.19697)">
-    <path fill="#FFFFFF" d="M0 132V58C0 25.967 25.967 0 58 0C90.033 0 116 25.967 116 58V132H90V58C90 40.327 75.673 26 58 26C40.327 26 26 40.327 26 58V132Z" />
-    <path fill="#6FC7EA" d="M26 106V102C26 88.193 37.193 77 51 77C64.807 77 76 88.193 76 102V106Z" id="person-shoulders" />
-    <path id="person-head" fill="#6FC7EA" d="M41 56A10 10 0 1 0 61 56A10 10 0 1 0 41 56Z" />
+<svg xmlns="http://www.w3.org/2000/svg" width="132" height="148" viewBox="0 0 132 148" role="img" aria-labelledby="title description">
+  <title id="title">ARC Lab logo symbol</title>
+  <desc id="description">A navy arc surrounding a teal person. ARC Lab logo symbol on a transparent background, without lettering.</desc>
+  <metadata>Symbol extracted from arc-a-transparent.svg. Original vector contours and colours. Navy #1E3765. Person #007FA3. Transparent background.</metadata>
+  <g id="symbol" transform="translate(8 8)">
+    <path fill="#1E3765" d="M0 132V58C0 25.967 25.967 0 58 0C90.033 0 116 25.967 116 58V132H90V58C90 40.327 75.673 26 58 26C40.327 26 26 40.327 26 58V132Z" />
+    <path fill="#007FA3" d="M26 106V102C26 88.193 37.193 77 51 77C64.807 77 76 88.193 76 102V106Z" id="person-shoulders" />
+    <path id="person-head" fill="#007FA3" d="M41 56A10 10 0 1 0 61 56A10 10 0 1 0 41 56Z" />
   </g>
 </svg>
