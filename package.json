@@ -1,8 +1,8 @@
 {
-  "name": "hive_lab_at_u_of_t",
+  "name": "arc_lab_at_u_of_t",
   "version": "0.0.1",
   "type": "module",
-  "description": "The Health Informatics, Visualization, and Equity (HIVE) Lab in the Institute of Health Policy, Management and Evaluation, Dalla Lana School of Public Health at the University of Toronto",
+  "description": "The AI for Responsible Care (ARC) Lab in the Institute of Health Policy, Management and Evaluation, Dalla Lana School of Public Health at the University of Toronto",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HIVE-UofT/lab-next-website.git"
+    "url": "git+https://github.com/arclab-uoft/arclab-website.git"
   },
   "author": "yumcoder <omid.jn@gmail.com>",
   "license": "MIT",

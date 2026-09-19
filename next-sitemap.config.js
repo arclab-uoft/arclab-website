@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 export default {
-    siteUrl: process.env.SITE_URL || 'https://github.com/YumcoderCom',
+    siteUrl: process.env.SITE_URL || 'https://arclab-uoft.ca',
     generateRobotsTxt: true, // (optional)
     // ...other options
 }

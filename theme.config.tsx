@@ -3,8 +3,6 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
 import Member from "./components/team/Member";
-// import Logo from "./components/hive/Logo";
-// import Hive from "./components/hive/Hive";
 
 const AppLogo = () => (
   <div className="flex items-center gap-2">
@@ -119,7 +117,7 @@ const config: DocsThemeConfig = {
   head: () => {
     const { asPath, defaultLocale, locale } = useRouter();
     const { frontMatter, title } = useConfig();
-    const domain = "https://www.hivelab-uoft.ca/"; // TODO: config app url
+    const domain = "https://arclab-uoft.ca";
     const url =
       domain + (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
 
@@ -133,7 +131,7 @@ const config: DocsThemeConfig = {
         .map((keyword) => keyword.trim());
     }
     // TODO: config default keywords
-    ["HIVE lab", "UofT", "AI"].forEach((keyword) => {
+    ["ARC Lab", "UofT", "AI", "responsible care", "health AI"].forEach((keyword) => {
       if (!keywords.includes(keyword)) keywords.push(keyword);
     });
 
@@ -144,10 +142,14 @@ const config: DocsThemeConfig = {
     return (
       <>
         <title>{app_title}</title>
+        <link rel="canonical" href={url} />
         <meta name="apple-mobile-web-app-title" content={app_title} />
         <meta name="author" content={frontMatter.author || "ARC Lab @UofT"} />
-        <meta property="keywords" content={app_keywords} />
+        <meta name="keywords" content={app_keywords} />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="ARC Lab @UofT" />
+        <meta property="og:title" content={app_title} />
+        <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={app_title} />
@@ -155,10 +157,10 @@ const config: DocsThemeConfig = {
         <meta name="description" content={description} />
         <meta name="twitter:description" content={description} />
         {frontMatter.image && (
-          <meta
-            name="twitter:image"
-            content={`${domain}${frontMatter.image}`}
-          />
+          <>
+            <meta property="og:image" content={`${domain}${frontMatter.image}`} />
+            <meta name="twitter:image" content={`${domain}${frontMatter.image}`} />
+          </>
         )}
 
         {/* Global Site Tag (gtag.js) - Google Analytics */}

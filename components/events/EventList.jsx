@@ -45,7 +45,7 @@ export default () => {
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl mx-auto sm:text-center">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-            HIVE Lab Events & Showcases
+            ARC Lab Events & Showcases
           </h3>
           <p className="text-gray-600 mt-3">Explore our events that bridge researchers, clinicians, and technologists to build intelligent, equitable health solutions.</p>
         </div>
@@ -79,4 +79,3 @@ export default () => {
     </section>
   );
 };
-
