@@ -11,7 +11,7 @@ export default function SliderControlsInside() {
                     </div>
 
                     <div className="w-2/3 max-w-3xl space-y-3">
-                        <img src="/arc-text.png" className="w-96" />
+                        <img src="/arc-text.svg" className="w-96" />
 
                         <p className="mt-3 text-gray-600">
                             Established in July 2025, ARC Lab develops AI for complex problems across health and public systems, from individual patient care to population, environmental, and urban health. Our research combines multimodal data, domain knowledge, and computational models to support prediction, personalization, scientific discovery, and real-world decision making. We focus on AI that is reliable, responsible, and useful as data, evidence, and real-world settings evolve.
