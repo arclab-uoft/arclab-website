@@ -29,8 +29,7 @@ export default {
 
   position: {
     title: "Open Positions",
-    type: "page",
-    display: "hidden"
+    type: "page"
   },
 
   projects: {
