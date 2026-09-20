@@ -1,4 +1,7 @@
-import '../styles.css';
+import 'katex/dist/katex.min.css';
+import 'nextra-theme-docs/style.css';
+import './styles.css';
+
 import { AppProps } from 'next/app';
 import { BibProvider } from '@/contexts/BibContext';
 import Script from 'next/script';
