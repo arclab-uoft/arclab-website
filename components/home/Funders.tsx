@@ -1,14 +1,16 @@
 import React from "react";
 
 const LOGOS = [
+    { image: "/funders/hive-lab.svg", className: "max-h-24" },
     { image: "/funders/canue.png", className: "max-h-24" },
-    { image: "/funders/indian.png", className: "max-h-32" },
-    { image: "/funders/singapore.svg", className: "max-h-32" },
-    { image: "/funders/taiwan.svg", className: "max-h-28" },
     { image: "/funders/SickKids.svg", className: "max-h-12" },
     { image: "/funders/sunnybrook.png", className: "max-h-14" },
     { image: "/funders/mount-sinai.png", className: "max-h-20" },
     { image: "/funders/uhn.png", className: "max-h-16" },
+    { image: "/funders/indian.png", className: "max-h-32" },
+    { image: "/funders/singapore.svg", className: "max-h-32" },
+    { image: "/funders/taiwan.svg", className: "max-h-28" },
+    
 ];
 
 export default function Supporters() {
