@@ -137,7 +137,7 @@ const config: DocsThemeConfig = {
 
     const app_keywords = keywords.join(", ");
 
-    const GA_TRACKING_ID = "G-CH35R4ZQXL";
+    const GA_TRACKING_ID = "G-HW5TTHYY04";
     const description = frontMatter.description || "ARC Lab @UofT";
     return (
       <>
